@@ -205,13 +205,8 @@ Future<Uint8List> _loadNetwork(ExtendedNetworkImageProvider key) async {
         headers: key.headers,
         timeLimit: key.timeLimit,
         timeRetry: key.timeRetry,
-        retries: key.retries,
-        cancelToken: key.cancelToken);
+        retries: key.retries,);
     return response!.bodyBytes;
-  } on OperationCanceledError catch (_) {
-    print('User cancel request ${key.url}.');
-    return Future<Uint8List>.error(
-        StateError('User cancel request ${key.url}.'));
   } catch (e) {
     return Future<Uint8List>.error(StateError('failed load ${key.url}. \n $e'));
   }
