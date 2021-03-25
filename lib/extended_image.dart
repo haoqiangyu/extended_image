@@ -13,3 +13,4 @@ export 'src/gesture/extended_image_slide_page.dart';
 export 'src/gesture/extended_image_slide_page_handler.dart';
 export 'src/image/extended_raw_image.dart';
 export 'src/image/extended_render_image.dart';
+export 'src/lib/extended_image_lib.dart';
